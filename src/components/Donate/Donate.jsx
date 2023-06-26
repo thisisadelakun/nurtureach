@@ -5,7 +5,7 @@ import { paymentMethodIcon } from '../../db/db2';
 import { Form, Button } from 'react-bootstrap';
 import CreditCardInput from './CreditCardInput';
 import BankDeposit from './BankDeposit';
-import PaypalPayment from './PaypalPayment';
+import PaypalPayment from './PayPalPayment';
 
 import InputGroup from 'react-bootstrap/InputGroup';
 import Bitcoin from './Bitcoin';
