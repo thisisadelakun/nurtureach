@@ -1,0 +1,180 @@
+.impact {
+    width: 100%;
+    height: 100%;
+    padding: 3rem 0;
+}
+
+.impact-header-img {
+    filter: brightness(50%);
+    background-image: url(../../assets/others_one.jpg);
+    background-color: #003e54;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+    padding: 13rem 0;
+    z-index: -1;
+}
+
+.impact-header-txt {
+    background-color: #003e54;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: relative;
+    top: -4rem;
+}
+
+.impact-header-txt h1 {
+    font-size: 38px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+.impact-main {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0;
+}
+
+.impact-main1 {
+    display: flex;
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.impact-main-title h3 {
+    font-family: 'Montserrat', sans-serif;
+    width: 90%;
+    margin: auto;
+    color: #006588;
+}
+
+.our-impact {
+    margin: 1rem 0;
+}
+
+.our-impact-left {
+    width: 100%;
+}
+
+.our-impact-left p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    display: flex;
+    margin: 1rem auto;
+    justify-self: center;
+    color: #006588;
+}
+
+.our-impact-left h5 {
+    font-family: 'Kanit', sans-serif;
+    border-bottom: 1px solid #006588;
+    width: min-content;
+    padding-bottom: 5px;
+    color: #006588;
+    font-weight: 500;
+}
+
+.our-impact-right {
+    float: right;
+}
+
+.impact2 {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding: 4rem 0;
+}
+
+.impact-header-txt-2 {
+    background-color: #003e54;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.impact-header-txt-2 h1 {
+    font-size: 38px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+.our-impact2 {
+    display: flex;
+}
+
+.our-impact-left2 img {
+    display: none;
+}
+
+.our-impact-right2 h3 {
+    font-family: 'Kanit', sans-serif;
+    color: #006588;
+    font-weight: 500;
+}
+
+.our-impact-right2 span {
+    color: #006588;
+    font-size: 14px;
+    margin-left: 1rem;
+}
+
+.our-impact-right2 p {
+    color: #006688;
+    font-size: 14px;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+    margin: 1.5rem 0;
+}
+
+
+@media only screen and (min-width: 998px) {
+
+    .impact-header-txt {
+        padding: 2rem 0;
+    }
+
+    .impact-header-txt-2 h1,
+     .impact-header-txt h1 {
+        font-size: 50px;
+    }
+
+    .impact-main1 {
+        display: flex;
+        float: right;
+        width: 80%;
+        margin: auto;
+        padding: 1.5rem;
+    }
+
+    .our-impact {
+        display: flex;
+        flex-direction: row !important;
+        gap: 3rem;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .impact-main-title h3 {
+        width: 80%;
+    }
+
+    .our-impact-left {
+        width: 80%;
+    }
+
+    .our-impact-left2 img {
+        display: block;
+    }
+
+    .our-impact2 {
+        display: flex;
+        flex-direction: row !important;
+        gap: 2rem;
+    }
+
+
+
+}

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+:root {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-size: 16px;
+  background: #fff;
+  min-width: 320px;
+  min-height: 100vh;
+  -webkit-text-size-adjust: none;
+  color: #006588;
+  font-weight: 300;
+  margin: 0;
+}
+
+.layout-col {
+  margin-top: 5rem;
+  height: 100%;
+}
+
+.yellow-btn {
+  background-color: rgb(255, 203, 112);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.yellow-btn:hover {
+  background-color: rgb(197, 127, 7);
+  color: #003e54;
+  transition: 0.3s ease;
+}
+
+article {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #fff5ef79;
+  padding: 1rem 0;
+}
+
+.artilce-h1 h1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem auto;
+  color: #006588;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 900;
+}
+
+/* impact section */
+
+.impactReached {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+}
+
+.impactReached-col {
+  flex-basis: 100%;
+  margin-bottom: 0;
+  text-align: center;
+  color: #fff;
+}
+
+.iR-col1,
+.iR-col2 {
+  border-bottom: 1px solid #ffffffce;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+}
+
+.ir-h1 {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+}
+
+.ir-span {
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  margin-top: -5rem;
+}
+
+.ir-p {
+  font-size: 13px;
+  margin: 0.5rem 0;
+}
+
+/* comment section */
+.page-comment {
+  width: 100%;
+  height: 100%;
+  margin: 0 0 4rem 0;
+}
+
+.page-comment-col {
+  width: 100%;
+}
+
+.comment-text {
+  width: 95%;
+  margin: auto;
+  padding: 1rem 1.5rem ;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+}
+
+.comment-text span {
+  font-style: italic;
+  margin-left: 5px;
+}
+
+input [ type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #003e54;
+  box-sizing: border-box;
+}
+
+/* bitcoin */
+.btc-col{
+  display: grid;
+  grid-template-columns: 2fr 0.5fr;
+}
+
+.btc-col p{
+  width: 80%;
+  /* font-size: 12px; */
+  word-break: break-all;
+}
+
+@media only screen and (min-width: 900px) {
+
+  /* impact section */
+
+  .ir-h1 {
+    font-size: 55px;
+  }
+
+  .impactReached-col {
+    flex-basis: 30%;
+    margin-bottom: 0;
+    margin: auto;
+  }
+
+  .iR-col1,
+  .iR-col2,
+  .iR-col3 {
+    text-align: left;
+    height: 150px;
+    border: none;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  /* comment section */
+  .page-comment-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .comment-text {
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+
+  .comment-text p{
+    margin: 0.8rem 0 0 0;
+  }
+}

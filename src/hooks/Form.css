@@ -1,0 +1,265 @@
+.steps-form-col {
+  width: 90%;
+  margin: auto;
+  background-color: mintcream;
+  padding: 2rem;
+}
+
+.steps-form-col h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #003e54;
+}
+
+.steps-form-col p {
+  font-family: 'Kanit', sans-serif;
+  color: #003e54;
+}
+
+.steps-form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+label {
+  font-family: 'Kanit', sans-serif;
+  color: #003e54;
+}
+
+input {
+  width: 100%;
+  padding: 5px 10px 5px 5px;
+  margin: 10px 0px;
+  border: 1px solid #003e54;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: 'Montserrat', sans-serif;
+  height: 40px;
+  color: #003e54;
+}
+
+select {
+  width: 100%;
+  padding: 0px 10px 0px 5px;
+  margin: 10px 0px;
+  border: 1px solid #003e54;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: 'Montserrat', sans-serif;
+  height: 40px;
+  font-size: 16px;
+  color: #003e54;
+}
+
+#dobDay,
+#dobMonth,
+#dobYear,
+#sex,
+#idType {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  color: rgba(0, 0, 0, 0.356);
+  font-size: 13px;
+}
+
+select:focus,
+input:focus {
+  outline: 2px solid #049fd8;
+  border: #0056b3;
+}
+
+.error {
+  color: rgb(179, 3, 3);
+  font-size: 13px;
+  font-family: 'Kanit', sans-serif;
+  text-indent: 5px;
+  margin-top: 5px;
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select select {
+  appearance: none;
+  font-size: 13px;
+}
+
+.custom-select-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.custom-select-icon .react-icons {
+  width: 30px;
+  height: 30px;
+  fill: #003e54;
+}
+
+option {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: #003e54;
+}
+
+select option:checked {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: #003e54;
+}
+
+.upload-files {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+
+}
+
+.preview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.preview p {
+  font-family: 'Kanit', sans-serif;
+  color: #003e54;
+}
+
+.preview img {
+  max-width: 250px;
+  margin: auto;
+}
+
+.step2-btn-col {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+  margin: 2rem auto;
+  width: 90%;
+}
+
+.next-btn-col {
+  width: 90%;
+  margin: auto;
+}
+
+.btn-next {
+  display: flex;
+  float: right;
+  margin-top: 1rem;
+}
+
+.btn-prev,
+.btn-next {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-submit {
+  color: #fff;
+  background-color: #003e54;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+/* success card */
+.success-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(33, 72, 83, 0.9);
+  z-index: 9999;
+}
+
+.card {
+  width: 18rem;
+  box-shadow: 0 4px 8px 0 rgba(73, 73, 73, 0.808), 0 6px 20px 0 rgba(126, 218, 255, 0.342);
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+@media only screen and (min-width:400px) {
+  .card {
+    width: 23rem;
+  }
+}
+
+@media only screen and (min-width:480px) {
+  .steps-form-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+    grid-column-gap: 0.5rem;
+  }
+
+  .steps-form-row2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0.5rem;
+  }
+
+  .steps-form-row :nth-child(3) {
+    grid-column: span 2;
+    margin-top: -5px;
+  }
+
+  .steps-form-row-flex {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .steps-form-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+  }
+
+  .steps-form-row :nth-child(3) {
+    grid-column: span 1;
+    margin-top: 15px;
+  }
+
+  .card {
+    width: 30rem;
+  }
+}

@@ -1,0 +1,311 @@
+.home-col {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 2rem 0rem;
+}
+
+.homeheaders {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.homeheaders::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./../../assets/nurture_bgr_one.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+    padding: 23rem 0;
+    z-index: -1;
+}
+
+.homeheaders h1 {
+    font-size: 36px;
+    font-weight: 500;
+    position: relative;
+    top: 8rem;
+    width: 90%;
+    margin: auto;
+    color: white;
+    text-align: center;
+    z-index: 3;
+    font-family: 'Kanit', sans-serif;
+}
+
+.learn_more {
+    color: rgba(255, 255, 255, 0.74);
+    position: relative;
+    top: 15rem;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.learn_more:hover {
+    color: white;
+}
+
+.abt-btn {
+    position: relative;
+    background-color: rgb(255, 203, 112);
+    top: 12rem;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    z-index: 3;
+}
+
+.abt-btn-link {
+    color: rgba(0, 0, 0, 0.664);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.homeheaders-text {
+    width: 100%;
+    height: 100%;
+    padding: 3rem 0;
+    margin-top: 20rem;
+    z-index: 3;
+    color: white;
+    background-color: #003e54;
+}
+
+.homeheaders-text-col {
+    width: 90%;
+    border: 1px solid #006588;
+    margin: auto;
+    padding: 2rem;
+}
+
+.homeheaders-text-col h2 {
+    font-size: 33px;
+    font-weight: 600;
+    font-family: 'Kanit', sans-serif;
+}
+
+.homeheaders-text-col p {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.938);
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1rem;
+}
+
+.homemain-col {
+    display: flex;
+    flex-direction: row;
+}
+
+.homemain-col2,
+.homemain-col1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.homemain-col2-text,
+.homemain-col1-text {
+    width: 80%;
+    margin: auto;
+    padding-top: 2rem;
+    color: #006588;
+}
+
+.homemain-col2-text h3,
+.homemain-col1-text h3 {
+    font-family: 'Kanit', sans-serif;
+}
+
+.homemain-col2-text p,
+.homemain-col1-text p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.homearticle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+
+.homearticle-col {
+    flex-basis: 100%;
+    margin-bottom: 0;
+}
+
+.homearticle-col1,
+.homearticle-col2,
+.homearticle-col3,
+.homearticle-col4 {
+    position: relative;
+}
+
+.homearticle-col1:hover,
+.homearticle-col2:hover,
+.homearticle-col3:hover,
+.homearticle-col4:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+    z-index: 2;
+}
+
+.homearticle-col1 {
+    border-bottom: 10px solid seagreen;
+}
+
+.homearticle-col2 {
+    border-bottom: 10px solid skyblue;
+}
+
+.homearticle-col3 {
+    border-bottom: 10px solid rgb(255, 166, 0);
+}
+
+.homearticle-col4 {
+    border-bottom: 10px solid #003e54;
+}
+
+.homearticle-col1 img,
+.homearticle-col2 img,
+.homearticle-col3 img,
+.homearticle-col4 img {
+    filter: brightness(30%);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-overlay {
+    font-family: 'Kanit', sans-serif;
+    font-size: 24px;
+    color: #fff;
+}
+
+.homearticle2{
+    font-family: 'Montserrat', sans-serif;
+    color: #006588;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: beige;
+   height: 200px;
+   display: flex;
+   align-items: center;
+   margin-top: 4rem;
+}
+
+.apply-now-col{
+    width: 80%;
+    margin: auto;
+}
+
+.homearticle3 {
+    background-color: sienna;
+    margin: 4rem 0 0 0;
+    padding: 7rem 0;
+}
+
+.home-comment-text p {
+    border: 1px solid saddlebrown;
+    padding: 2rem;
+    color: saddlebrown;
+}
+
+@media only screen and (min-width: 576px) {
+    .homeheaders h1 {
+        font-size: 43px;
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .homeheaders h1 {
+        font-size: 43px;
+        top: 9rem;
+        width: 70%;
+        line-height: 4rem;
+    }
+
+    .homeheaders-text-col h2 {
+        font-size: 43px;
+        font-weight: 600;
+        font-family: 'Kanit', sans-serif;
+    }
+
+    .homemain-col1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1rem;
+    }
+
+    .homemain-col2 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+        grid-template-areas: "homemain-col2-img homemain-col2-text";
+    }
+
+    .homemain-col2-text,
+    .homemain-col1-text {
+        width: 90%;
+        margin: auto;
+        padding: 1.5rem 0;
+    }
+
+    .homemain-col2-text {
+        order: 1;
+    }
+
+    .homemain-col2-img {
+        order: 2;
+    }
+
+    .homemain-col2-img img,
+    .homemain-col1-img img {
+        width: 550px;
+    }
+
+    .homearticle {
+        flex-wrap: nowrap;
+        width: 90%;
+        margin-left: -5%;
+    }
+
+    .homearticle-col {
+        flex-basis: 25%;
+        margin-bottom: 0;
+    }
+
+    .homearticle-col4,
+    .homearticle-col3,
+    .homearticle-col2,
+    .homearticle-col1 {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .homearticle-col4 img,
+    .homearticle-col3 img,
+    .homearticle-col2 img,
+    .homearticle-col1 img {
+        width: 100%;
+        height: 400px;
+    }
+
+
+}

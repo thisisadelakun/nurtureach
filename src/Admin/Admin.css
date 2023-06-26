@@ -1,0 +1,73 @@
+/* Table styles */
+Table {
+  width: 90%;
+  margin: auto;
+  /* border-collapse: collapse; */
+  border: 1px solid #aef5b0;
+  font-family: 'Kanit', sans-serif;
+  overflow-x: scroll;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  color: #006588;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Kanit', sans-serif;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Download button style */
+.button-download {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.button-download:hover {
+  background-color: #45a049;
+}
+
+/* Horizontal line style */
+tr:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Image style */
+td.image-cell {
+  max-width: 30px;
+}
+
+.image-cell img {
+  max-width: 50px;
+  height: 50px;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 600px) {
+  table {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  th,
+  td {
+    padding: 6px;
+  }
+
+  .button-download {
+    font-size: 12px;
+  }
+}

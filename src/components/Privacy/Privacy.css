@@ -1,0 +1,66 @@
+.privacy {
+    width: 100%;
+    height: 100%;
+    padding: 3rem 0;
+}
+
+.privacy-header-img {
+    filter: brightness(50%);
+    background-image: url(../../assets/others_one.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+    padding: 13rem 0;
+    z-index: -1;
+}
+
+.privacy-header-txt {
+    background-color: #003e54;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: relative;
+    top: -4rem;
+}
+
+.privacy-header-txt h1 {
+    font-size: 38px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+.privacy-main {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.privacy-policy {
+    margin-bottom: 5rem;
+    color: #003e54;
+}
+
+.privacy-main h3 {
+    font-family: 'Kanit', sans-serif;
+}
+.privacy-main p {
+    margin: 2rem 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.terms-list{
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 998px) {
+    .privacy-header-txt {
+        padding: 2rem 0;
+    }
+
+    .privacy-header-txt h1 {
+        font-size: 50px;
+    }
+}

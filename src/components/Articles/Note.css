@@ -1,0 +1,186 @@
+.note {
+    width: 100%;
+    height: 100%;
+    padding: 3rem 0;
+}
+
+.note1-header-img {
+    filter: brightness(50%);
+    background-image: url(../../assets/food_four.jpg);
+    background-color: skyblue;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+    padding: 13rem 0;
+    z-index: -1;
+}
+
+.note2-header-img {
+    filter: brightness(50%);
+    background-image: url(../../assets/education_one.jpg);
+    background-color: rgb(255, 166, 0);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+    padding: 13rem 0;
+    z-index: -1;
+}
+
+.note3-header-img {
+    filter: brightness(50%);
+    background-image: url(../../assets/earth_one_greener.jpg);
+    background-color: seagreen;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+    padding: 13rem 0;
+    z-index: -1;
+}
+
+.note4-header-img {
+    filter: brightness(50%);
+    background-image: url(../../assets/others_three_bg.jpg);
+    background-color: #003e54;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+    padding: 13rem 0;
+    z-index: -1;
+}
+
+.note1-header-txt {
+    background-color: skyblue;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: relative;
+    top: -4rem;
+}
+
+.note2-header-txt {
+    background-color: rgb(255, 166, 0);
+    padding: 1.5rem 0;
+    text-align: center;
+    position: relative;
+    top: -4rem;
+}
+
+.note3-header-txt {
+    background-color: seagreen;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: relative;
+    top: -4rem;
+}
+
+.note4-header-txt {
+    background-color: #003e54;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: relative;
+    top: -4rem;
+}
+
+.note1-header-txt h1 {
+    font-size: 38px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    color: #003e54;
+}
+
+.note2-header-txt h1,
+.note3-header-txt h1,
+.note4-header-txt h1 {
+    font-size: 38px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+.note-main {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+
+.note-main-title h3 {
+    font-family: 'Kanit', sans-serif;
+    width: 80%;
+    margin: auto;
+    color: #006588;
+    ;
+}
+
+.note-main p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    width: 80%;
+    display: flex;
+    margin: 2rem auto;
+    justify-self: center;
+    color: #006588;
+}
+
+.note-main h4 {
+    font-family: 'Kanit', sans-serif;
+    width: 80%;
+    display: flex;
+    margin: 3rem auto;
+    justify-self: center;
+    color: #006588;
+}
+
+.note-main span {
+    font-family: 'Kanit', sans-serif;
+    width: 60%;
+    text-align: center;
+    display: flex;
+    margin: 3rem auto;
+    justify-self: center;
+    color: #006588;
+    font-style: italic;
+    background-color: mintcream;
+}
+
+.note-pg-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.note-article {
+    background-color: skyblue;
+    margin: 4rem 0 0 0;
+    padding: 7rem 0;
+}
+
+.note-comment-text p {
+    border: 1px solid #003e54;
+    padding: 2rem;
+    color: #003e54;
+}
+
+@media only screen and (min-width: 998px) {
+    .note1-header-txt,
+    .note2-header-txt,
+    .note3-header-txt,
+    .note4-header-txt {
+        padding: 2rem 0;
+    }
+
+    .note1-header-txt h1,
+    .note2-header-txt h1,
+    .note3-header-txt h1,
+    .note4-header-txt h1 {
+        font-size: 50px;
+    }
+
+    .note-main {
+        width: 70%;
+    }
+
+    .note-pg-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex-direction: row !important;
+        margin-left: 5%;
+    }
+}
