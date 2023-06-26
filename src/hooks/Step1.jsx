@@ -13,6 +13,7 @@ const Step1 = ({ onNext }) => {
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [postalCode, setPostalCode] = useState('');
+  const [message, setMessage] = useState('');
   const [errors, setErrors] = useState({});
 
   const validateForm = () => {
@@ -40,8 +41,6 @@ const Step1 = ({ onNext }) => {
 
     if (!phoneNumber) {
       newErrors.phoneNumber = 'Phone Number is required';
-    } else if (!isValidPhoneNumber(phoneNumber)) {
-      newErrors.phoneNumber = 'Invalid phone number format';
     } else {
       delete newErrors.phoneNumber; // Clear the error for phoneNumber
     }
@@ -65,7 +64,13 @@ const Step1 = ({ onNext }) => {
     }
 
     if (!postalCode) {
-      newErrors.postalCode = 'Zip Code is required';
+      newErrors.postalCode = 'Postal / Zip Code is required';
+    } else {
+      delete newErrors.postalCode; // Clear the error for postalCode
+    }
+
+    if (!message) {
+      newErrors.message = 'Message is required';
     } else {
       delete newErrors.postalCode; // Clear the error for postalCode
     }
@@ -80,10 +85,8 @@ const Step1 = ({ onNext }) => {
     return emailRegex.test(value);
   };
 
-  const isValidPhoneNumber = (value) => {
-    const phoneRegex = /^\d{10}$/;
-    return phoneRegex.test(value);
-  };
+
+
 
   const handleNext = () => {
     const isValid = validateForm();
@@ -100,6 +103,7 @@ const Step1 = ({ onNext }) => {
         city,
         state,
         postalCode,
+        message,
       };
 
       onNext(formData);
@@ -197,7 +201,7 @@ const Step1 = ({ onNext }) => {
               }}
               placeholder="Enter your phone number"
             />
-            {errors.phoneNumber && <div className="error">{errors.phoneNumber}</div>}
+            {errors.postalCode && <div className="error">{errors.phoneNumber}</div>}
           </div>
         </div>
 
@@ -251,7 +255,7 @@ const Step1 = ({ onNext }) => {
           </div>
 
           <div className="steps-form">
-            <label htmlFor="state">State:</label>
+            <label htmlFor="state">State / Province:</label>
             <input
               type="text"
               id="state"
@@ -269,7 +273,7 @@ const Step1 = ({ onNext }) => {
           </div>
 
           <div className="steps-form">
-            <label htmlFor="postalCode">Zip Code:</label>
+            <label htmlFor="postalCode">Postal / Zip Code:</label>
             <input
               type="text"
               id="postalCode"
@@ -286,6 +290,26 @@ const Step1 = ({ onNext }) => {
             {errors.postalCode && <div className="error">{errors.postalCode}</div>}
           </div>
         </div>
+
+        <div className="steps-form">
+          <label htmlFor="message">Message:</label>
+          <textarea
+            id="message"
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value)
+              if (errors.message) {
+                delete errors.message;
+                setErrors({ ...errors });
+              }
+            }}
+            placeholder="Why do you need our help and how can we help you?"
+            style={{ height: '150px', padding: "10px", }}
+
+          />
+          {errors.message && <div className="error">{errors.message}</div>}
+        </div>
+
       </div>
       <div className="next-btn-col">
         <button className='btn-next yellow-btn' onClick={handleNext}>Next</button>

@@ -97,14 +97,14 @@
 }
 
 .note-main {
-    width: 90%;
+    width: 95%;
     margin: 2rem auto;
 }
 
 
 .note-main-title h3 {
     font-family: 'Kanit', sans-serif;
-    width: 80%;
+    width: 85%;
     margin: auto;
     color: #006588;
     ;
@@ -113,7 +113,7 @@
 .note-main p {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    width: 80%;
+    width: 85%;
     display: flex;
     margin: 2rem auto;
     justify-self: center;
@@ -122,7 +122,7 @@
 
 .note-main h4 {
     font-family: 'Kanit', sans-serif;
-    width: 80%;
+    width: 85%;
     display: flex;
     margin: 3rem auto;
     justify-self: center;
@@ -159,6 +159,7 @@
 }
 
 @media only screen and (min-width: 998px) {
+
     .note1-header-txt,
     .note2-header-txt,
     .note3-header-txt,
@@ -174,7 +175,7 @@
     }
 
     .note-main {
-        width: 70%;
+        width: 80%;
     }
 
     .note-pg-row {

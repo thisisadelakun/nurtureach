@@ -2,6 +2,9 @@ import React from 'react'
 import './Note.css'
 import { articleContent, impactContent, commentContent } from '../../db/db'
 
+import { NavLink } from 'react-router-dom';
+import { TbPlayerTrackPrevFilled } from 'react-icons/tb'
+
 const Others = () => {
   return (
     <div className='note'>
@@ -110,6 +113,19 @@ const Others = () => {
 
         </div>
       ))}
+
+      <div className='yellow-btn shadow' style={{
+        background: "seagreen", display: "flex", float: "left",
+        width: "fit-content", padding: "0.8rem 1.5rem"
+      }}>
+        <NavLink
+          className=""
+          style={{ textDecoration: "none", color: "#fff" }}
+          to='/our-impact/afforestation'
+        >
+          <TbPlayerTrackPrevFilled /> PREV
+        </NavLink>
+      </div>
 
       <div className='note-article' style={{ background: "#003e54", color: "#fff" }}>
         <div className="impactReached">

@@ -2,6 +2,9 @@ import React from 'react'
 import './Note.css'
 import { articleContent, impactContent, commentContent } from '../../db/db'
 
+import { NavLink } from 'react-router-dom';
+import { TbPlayerTrackPrevFilled, TbPlayerTrackNextFilled } from 'react-icons/tb'
+
 const TreePlanting = () => {
   return (
     <div className='note'>
@@ -100,6 +103,32 @@ const TreePlanting = () => {
 
         </div>
       ))}
+
+      <div className='yellow-btn shadow' style={{
+        background: "rgb(255, 166, 0)", display: "flex", float: "left",
+        width: "fit-content", padding: "0.8rem 1.5rem"
+      }}>
+        <NavLink
+          className=""
+          style={{ textDecoration: "none", color: "#003e54" }}
+          to='/our-impact/power-of-education'
+        >
+          <TbPlayerTrackPrevFilled /> PREV
+        </NavLink>
+      </div>
+
+      <div className='yellow-btn shadow' style={{
+        background: "#003e54", display: "flex", float: "right", width: "fit-content",
+        padding: "0.8rem 1.5rem"
+      }}>
+        <NavLink
+          className=""
+          style={{ textDecoration: "none", color: "#fff" }}
+          to='/our-impact/empowering-change'
+        >
+          NEXT <TbPlayerTrackNextFilled />
+        </NavLink>
+      </div>
 
       <div className='note-article' style={{ background: "seagreen", color: "#fff" }}>
         <div className="impactReached">

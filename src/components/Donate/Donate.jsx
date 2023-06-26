@@ -96,21 +96,21 @@ const Donate = () => {
 
     try {
       await saveDonation(donationData);
-      console.log('Donation form submitted successfully.');
-      // Reset form or show success message
     } catch (error) {
-      console.error('Error submitting donation form:', error);
-      // Show error message
+
     }
 
     if (donationStep === 1) {
       setDonationStep(2);
+      window.scrollTo(0, 0); // Scroll to top of the page
     } else if (donationStep === 2) {
       if (paymentMethod === 'creditCard') {
         handleCreditCardPayment(); // Call credit card payment function
       } else if (paymentMethod === 'bankTransfer') {
         handleBankTransferPayment(); // Call bank transfer payment function
       } else if (paymentMethod === 'applePay') {
+        handleApplePayPayment(); // Call Apple Pay payment function
+      } else if (paymentMethod === 'googlePay') {
         handleApplePayPayment(); // Call Apple Pay payment function
       } else if (paymentMethod === 'paypal') {
         handlePayPalPayment(); // Call PayPal payment function
@@ -382,7 +382,7 @@ const Donate = () => {
                   <option value="giftCards">Gift Cards</option>
                   <option value="paypal">PayPal</option>
                   <option value="applePay">Apple Pay</option>
-                  <option value="applePay">Google Pay</option>
+                  <option value="googlePay">Google Pay</option>
 
                 </Form.Select >
                 <Form.Control.Feedback type="invalid">
@@ -490,7 +490,6 @@ const Donate = () => {
               Go Back
             </Button>
             <h3>Thank you for your donation!</h3>
-            {/* Display donation confirmation details */}
           </div>
         )}
       </div>

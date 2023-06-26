@@ -3,6 +3,8 @@ import './Apply.css'
 import { applyContent } from '../../db/db2'
 import { Link } from 'react-router-dom'
 
+import { HiClipboardDocumentCheck } from 'react-icons/hi2'
+
 const Apply = () => {
     return (
         <div className='apply'>
@@ -89,8 +91,8 @@ const Apply = () => {
 
             <div className='apply-link-col'>
                 <Link style={{ color: "#fff", textDecoration: "none" }} to="/application-form">
-                    <button className='apply-link'>
-                        APPLY HERE
+                    <button className='shadow apply-link'>
+                        APPLY HERE <HiClipboardDocumentCheck />
                     </button>
                 </Link>
             </div>

@@ -49,7 +49,7 @@ function App() {
           <Route path='/covid-19' element={<Covid19 />} />
           <Route path='/donate' element={<Donate />} />
           <Route path='/apply-now' element={<Apply />} />
-          <Route path="xyzadmin123" element={<AdminAuths />} />
+          <Route path="/xyzadmin123" element={<AdminAuths />} />
           <Route path="/application-form" element={<ApplyForm />} />
           <Route path="/our-impact" element={<Impact />} />
           <Route path="/our-impact/nourishing-live" element={<Nourishing />} />

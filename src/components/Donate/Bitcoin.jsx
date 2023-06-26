@@ -90,7 +90,7 @@ const Bitcoin = ({ amount, name, email, phone }) => {
       </div>
 
       <div style={{ margin: "0.5rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
-        <p>Amount: ${amount}</p>
+        <p>Amount: $ {amount}.00</p>
         <p>Name: {name}</p>
         <p>Email: {email}</p>
         <p>Phone: {phone}</p>
@@ -146,7 +146,7 @@ const Bitcoin = ({ amount, name, email, phone }) => {
                   }}
                   size="sm" onClick={() => handleCopy('1AbCDeFgHiJkLmNoPqRsTuVwXyZ3eQrT1uX3myceds87Ty6aajx')}
                 >
-                  <RiFileCopyFill />
+                  copy <RiFileCopyFill />
                 </Button>{' '}
               </div>
             </div>
@@ -192,7 +192,7 @@ const Bitcoin = ({ amount, name, email, phone }) => {
                 }}
                 size="sm" onClick={() => handleCopy('1AbCDeFgHiJkLmNoPqRsTuVwXyZ3eQrT1uX3myceds87Ty6aajx')}
               >
-                <RiFileCopyFill />
+                copy<RiFileCopyFill />
               </Button>{' '}
             </div>
           </div>

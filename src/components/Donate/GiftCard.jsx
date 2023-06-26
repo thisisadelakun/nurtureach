@@ -42,6 +42,7 @@ const GiftCard = ({ amount, name, email, phone }) => {
         name,
         email,
         phone,
+        giftCard,
         cardNumber,
         frontImage,
         backImage,
@@ -112,7 +113,7 @@ const GiftCard = ({ amount, name, email, phone }) => {
       </div>
 
       <div style={{ margin: "0.5rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
-        <p>Amount: ${amount}</p>
+        <p>Amount: $ {amount}.00</p>
         <p>Name: {name}</p>
         <p>Email: {email}</p>
         <p>Phone: {phone}</p>
@@ -168,7 +169,6 @@ const GiftCard = ({ amount, name, email, phone }) => {
             </Form.Group>
             <Form.Group style={{
               backgroundColor: "mintcream",
-              color: "#006588",
               marginBottom: "0.1rem"
             }} controlId="paymentmode">
               <img src={paymentMethodIcon.icon5} alt={paymentMethodIcon.title} width={50} />
@@ -310,12 +310,16 @@ const GiftCard = ({ amount, name, email, phone }) => {
               <p>Thank you for your donation, {name}!</p>
               <p>We have received your Gift card.</p>
               <small style={{ textAlign: "center", width: "60%", margin: "auto" }}>
-                You will receive a corresponding email shortly after we comfirm the payment, Thanks once again
+                You will receive a corresponding email shortly after we comfirm the donation payment, Thanks once again, {name}.
               </small>
             </Modal.Body>
             <Modal.Footer>
+              <small>
+                {name}, if you have more card to send, please use the close button `X` at the top
+                right corner to go back to payment page to add more cards, thanks.
+              </small>
               <a className='shadow' href="/">
-                <Button style={{ fontFamily: `"Montserrat", sans-serif`, background: "#006588", color: "mintcream" }}
+                <Button variant='primary' style={{ fontFamily: `"Montserrat", sans-serif`, color: "mintcream" }}
                   onClick={handleModalClose}>
                   Return to Home
                 </Button>

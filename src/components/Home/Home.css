@@ -19,6 +19,7 @@
     width: 100%;
     height: 100%;
     background-image: url(./../../assets/nurture_bgr_one.jpg);
+    background-color: #003e54;
     background-size: cover;
     background-position: center;
     filter: brightness(50%);
@@ -136,6 +137,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     margin: auto;
 }
@@ -197,19 +199,20 @@
     color: #fff;
 }
 
-.homearticle2{
+.homearticle2 {
     font-family: 'Montserrat', sans-serif;
     color: #006588;
     font-size: 17px;
     font-weight: 500;
     background-color: beige;
-   height: 200px;
-   display: flex;
-   align-items: center;
-   margin-top: 4rem;
+    height: 100%;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
 }
 
-.apply-now-col{
+.apply-now-col {
     width: 80%;
     margin: auto;
 }

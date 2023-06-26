@@ -61,7 +61,12 @@ const BankUI = () => {
 
             await firestore.collection('bankForm').doc(submissionId).delete();
 
-            await storage.ref().child(`bankForm/${submissionId}_receipt.jpg`).delete();
+            const receiptRef = storage.ref().child(`bankForm/${submissionId}_receipt.jpg`);
+            const receiptSnapshot = await receiptRef.getMetadata();
+
+            if (receiptSnapshot.exists) {
+                await receiptRef.delete();
+            }
 
             setSubmissions((prevSubmissions) =>
                 prevSubmissions.filter((submission) => submission.id !== submissionId)
@@ -72,9 +77,16 @@ const BankUI = () => {
 
             console.log('Bank form submission deleted successfully.');
         } catch (error) {
-            console.error('Error deleting bank form submission:', error);
+            if (error.code === 'storage/object-not-found') {
+                console.log('Receipt object does not exist.');
+            } else {
+                console.error('Error deleting bank form submission:', error);
+            }
         }
     };
+
+
+
 
     return (
         <div style={{ width: '100%', margin: '5rem auto', minHeight: '100vh' }}>
@@ -87,7 +99,7 @@ const BankUI = () => {
                             <th>Amount</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Phone</th>
+                            <th>Recipient Name</th>
                             <th>Receipt</th>
                             <th>Actions</th>
                         </tr>
@@ -96,10 +108,10 @@ const BankUI = () => {
                         {submissions.map((submission) => (
                             <tr key={submission.id}>
                                 <td>{submission.id}</td>
-                                <td>{submission.completeFormData.amount}</td>
-                                <td>{submission.completeFormData.name}</td>
-                                <td>{submission.completeFormData.email}</td>
-                                <td>{submission.completeFormData.phone}</td>
+                                <td>{submission.amount}</td>
+                                <td>{submission.name}</td>
+                                <td>{submission.email}</td>
+                                <td>{submission.recipientName}</td>
                                 <td>
                                     <img src={submission.receiptURL} alt='Receipt' width={150} />
                                     <button

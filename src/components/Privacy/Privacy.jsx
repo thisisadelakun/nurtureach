@@ -6,7 +6,7 @@ const Privacy = () => {
     return (
         <div className='privacy'>
             {privacyContent.map((item) => (
-                <div className="privacy-header">
+                <div key={item.id} className="privacy-header">
                     {item.id === "0" && (
                         <div>
                             <div className="privacy-header-img"></div>
@@ -19,7 +19,7 @@ const Privacy = () => {
             ))}
 
             {privacyContent.map((item) => (
-                <div className="privacy-main container">
+                <div key={item.id} className="privacy-main container">
                     {item.id === "1" && (
                         <div className="privacy-policy">
                             <h3>

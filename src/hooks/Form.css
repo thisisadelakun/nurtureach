@@ -1,18 +1,26 @@
 .steps-form-col {
-  width: 90%;
+  width: 95%;
   margin: auto;
   background-color: mintcream;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .steps-form-col h2 {
   font-family: 'Montserrat', sans-serif;
-  color: #003e54;
+  color: #006588;
+
+}
+
+.application-main-title h6 {
+  width: 95%;
+  margin: auto;
+  font-family: 'Kanit', sans-serif;
+  font-style: italic;
 }
 
 .steps-form-col p {
   font-family: 'Kanit', sans-serif;
-  color: #003e54;
+  color: #006588;
 }
 
 .steps-form {
@@ -29,32 +37,35 @@
 
 label {
   font-family: 'Kanit', sans-serif;
-  color: #003e54;
+  color: #006588;
 }
 
+textarea,
 input {
   width: 100%;
   padding: 5px 10px 5px 5px;
   margin: 10px 0px;
-  border: 1px solid #003e54;
+  border: 1.5px solid #006588;
   box-sizing: border-box;
   border-radius: 3px;
   font-family: 'Montserrat', sans-serif;
   height: 40px;
-  color: #003e54;
+  color: #006588;
+  background: transparent;
 }
 
 select {
   width: 100%;
   padding: 0px 10px 0px 5px;
   margin: 10px 0px;
-  border: 1px solid #003e54;
+  border: 1px solid #006588;
   box-sizing: border-box;
   border-radius: 3px;
   font-family: 'Montserrat', sans-serif;
   height: 40px;
   font-size: 16px;
-  color: #003e54;
+  color: #006588;
+  background: transparent;
 }
 
 #dobDay,
@@ -72,6 +83,8 @@ input::placeholder {
   font-size: 13px;
 }
 
+
+textarea:focus,
 select:focus,
 input:focus {
   outline: 2px solid #049fd8;

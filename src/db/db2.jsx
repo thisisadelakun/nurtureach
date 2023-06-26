@@ -15,6 +15,8 @@ import icon9 from '../assets/Icon9.svg'
 import icon10 from '../assets/Icon10.svg'
 import icon11 from '../assets/Icon11.svg'
 import icon12 from '../assets/Icon12.svg'
+import icon13 from '../assets/Icon13.svg'
+import icon14 from '../assets/Icon14.svg'
 
 
 export const aboutContent = [
@@ -359,4 +361,6 @@ export const paymentMethodIcon = {
     icon10: icon10,
     icon11: icon11,
     icon12: icon12,
+    icon13: icon13,
+    icon14: icon14,
 }

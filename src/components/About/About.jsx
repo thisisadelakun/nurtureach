@@ -2,6 +2,9 @@ import React from 'react'
 import './About.css'
 import { aboutContent } from '../../db/db2'
 import { impactContent, commentContent } from '../../db/db'
+import { applyContent } from '../../db/db2';
+
+import { NavLink } from 'react-router-dom';
 
 const About = () => {
     return (
@@ -79,13 +82,56 @@ const About = () => {
                             <p>{item.content9}</p>
                         </div>
                     )}
+                    
                     {item.id === "1" && (
                         <div className="about-us">
-                            <p>{item.content10}</p>
+                        
+                                <div className="about-us" style={{
+                                    fontFamily:`'Montserrat', sans-serif`,
+                                    width: "85%", margin:" 2rem auto",justifySelf: "center",
+                                    color: '#006588',
+
+                                }}>
+                                    <NavLink className="nav-link-apply" to='/apply-now' style={{
+                                        color: "#003e54",
+                                        fontStyle: "italic", fontWeight: "900",
+                                        textDecoration:"none",
+                                        cursor:"pointer",
+                                        padding:"0.1rem 0",
+                                        borderBottom:"1px solid #003e54"
+                                    }}>Donate to our cause,
+                                    </NavLink> {item.content10}
+                                </div>
+                            
                         </div>
                     )}
+
+
+
                 </div>
             ))}
+
+            <div className="homearticle2 shadow">
+                {applyContent.map((item) => (
+                    <div key={`homearticle2-${item.id}`} className="apply-now">
+                        {item.id === "0" && (
+                            <div className="apply-now-col">
+                                <p>{item.content1}</p>
+                                <p>
+                                    <NavLink
+                                        className="nav-link-apply"
+                                        to='/apply-now'
+                                        style={{ color: "#003e54", fontStyle: "italic", fontWeight: "900", marginRight: "5px" }}
+                                    >
+                                        Apply now
+                                    </NavLink> {item.content2}
+                                </p>
+                            </div>
+                        )}
+
+                    </div>
+                ))}
+            </div>
 
             <div className='about-article'>
                 <div className="impactReached">
@@ -99,7 +145,7 @@ const About = () => {
                                     <p></p>
                                 </div>
                             )}
-                            
+
                             {item.id === "5" && (
                                 <div className="iR-col2">
                                     <h1 className='ir-h1'>{item.title}</h1>

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Impact.css'
 import { NavLink } from 'react-router-dom';
-import { articleContent, impactContent, whatWeDoContent, socialMediaContent } from '../../db/db'
+import { articleContent, whatWeDoContent, socialMediaContent } from '../../db/db'
 
 
 const Impact = () => {
@@ -115,7 +115,7 @@ const Impact = () => {
                                         <h3>{item.subtitle}</h3>
                                         <span>{socialMediaContent.iconFacebook} {socialMediaContent.iconTwitter}</span>
                                         <p>{item.paragraph1}</p>
-                                        <p>{item.paragraph1}</p>
+                                        <p>{item.paragraph2}</p>
                                         <div className='yellow-btn shadow' style={{ width: "fit-content", padding: "0.8rem 1.5rem" }}>
                                             <NavLink className=""
                                                 style={{ textDecoration: "none", color: "#003e54" }}
@@ -142,7 +142,7 @@ const Impact = () => {
                                         <h3>{item.title2}</h3>
                                         <span>{socialMediaContent.iconFacebook} {socialMediaContent.iconTwitter}</span>
                                         <p>{item.paragraph1}</p>
-                                        <p>{item.paragraph1}</p>
+                                        <p>{item.paragraph2}</p>
                                         <div className='yellow-btn shadow' style={{ width: "fit-content", padding: "0.8rem 1.5rem" }}>
                                             <NavLink
                                                 className=""
@@ -170,7 +170,7 @@ const Impact = () => {
                                         <h3>{item.subtitle}</h3>
                                         <span>{socialMediaContent.iconFacebook} {socialMediaContent.iconTwitter}</span>
                                         <p>{item.paragraph1}</p>
-                                        <p>{item.paragraph1}</p>
+                                        <p>{item.paragraph2}</p>
                                         <div className='yellow-btn shadow' style={{ width: "fit-content", padding: "0.8rem 1.5rem" }}>
                                             <NavLink
                                                 className=""
@@ -198,7 +198,7 @@ const Impact = () => {
                                         <h3>{item.title2}</h3>
                                         <span>{socialMediaContent.iconFacebook} {socialMediaContent.iconTwitter}</span>
                                         <p>{item.paragraph1}</p>
-                                        <p>{item.paragraph1}</p>
+                                        <p>{item.paragraph2}</p>
                                         <div className='yellow-btn shadow' style={{ width: "fit-content", padding: "0.8rem 1.5rem" }}>
                                             <NavLink
                                                 className=""

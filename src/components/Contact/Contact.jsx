@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './Contact.css'
 
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -83,7 +82,7 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className="mt-5">
+            <div className="m-3" style={{ fontFamily: `'Montserrat', sans-serif`, color: "#006588", }}>
                 <div className="shadow steps-form-col">
                     <div className=" mb-4">
                         <h4>Email</h4>
@@ -130,7 +129,7 @@ const Contact = () => {
                             />
                         </div>
 
-                        <button type="submit" className="btn btn-primary">Send</button>
+                        <button type="submit" className="btn"  style={{backgroundColor:"#006588", color:"#fff"}}>Send</button>
                     </Form>
 
                 </div>

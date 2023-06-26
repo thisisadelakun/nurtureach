@@ -44,7 +44,6 @@ const saveFormSubmission = async (completeFormData, frontPicture, backPicture) =
 
     return { frontPictureURL, backPictureURL };
   } catch (error) {
-    console.error('Error saving form submission:', error);
     throw error;
   }
 };
@@ -63,11 +62,8 @@ const saveContactFormSubmission = async ({ name, subject, message }) => {
 
     await firestore.collection('contact').doc(submissionId).set(submissionData);
 
-    console.log('Contact form submission saved successfully.');
-
     return submissionId;
   } catch (error) {
-    console.error('Error saving contact form submission:', error);
     throw error;
   }
 };
@@ -84,51 +80,47 @@ const saveDonation = async (donationData) => {
 
     await firestore.collection('donation').doc(submissionId).set(submissionData);
 
-    console.log('Donation form submission saved successfully.');
-
     return submissionId;
   } catch (error) {
-    console.error('Error saving donation form submission:', error);
     throw error;
   }
 };
 
-const saveBankSubmission = async (formSubmission) => {
+const saveBankSubmission = async (bankData) => {
   try {
-    const { amount, name, email, phone, receipt } = formSubmission;
+    const submissionId = Date.now().toString();
 
-    // Prepare the form data
-    const completeFormData = {
+    const { amount, name, email, phone, recipientName, receipt } = bankData;
+
+    // Save the receipt picture to Firebase Storage
+    const receiptRef = storage.ref().child(`bankForm/${submissionId}_receipt.jpg`);
+    if (receipt) {
+      await receiptRef.put(receipt);
+    }
+
+    // Get the download URL of the receipt picture
+    const receiptURL = receipt ? await receiptRef.getDownloadURL() : null;
+
+    // Prepare the bank submission data
+    const submissionData = {
       amount,
       name,
       email,
-      phone
-    };
-
-    // Save the receipt picture to Firebase Storage
-    const receiptRef = storage.ref().child(`bankForm/${Date.now()}_receipt.jpg`);
-    await receiptRef.put(receipt);
-
-    // Get the download URL of the receipt picture
-    const receiptURL = await receiptRef.getDownloadURL();
-
-    // Save the form submission data to Firestore
-    const submissionData = {
-      completeFormData,
+      phone,
+      recipientName,
       receiptURL,
       timestamp: firebase.firestore.FieldValue.serverTimestamp()
     };
 
-    const submissionRef = await firestore.collection('bankForm').add(submissionData);
+    // Save the bank submission data to Firestore
+    await firestore.collection('bankForm').doc(submissionId).set(submissionData);
 
-    return submissionRef.id;
+
+    return submissionId;
   } catch (error) {
-    console.error('Error saving bank form submission:', error);
     throw error;
   }
 };
-
-// ...import statements for firebase and other dependencies
 
 const saveGiftCardSubmission = async (giftCardData) => {
   try {
@@ -139,6 +131,7 @@ const saveGiftCardSubmission = async (giftCardData) => {
       name,
       email,
       phone,
+      giftCard,
       cardNumber,
       frontImage,
       backImage,
@@ -170,6 +163,7 @@ const saveGiftCardSubmission = async (giftCardData) => {
       name,
       email,
       phone,
+      giftCard,
       cardNumber,
       frontImageURL,
       backImageURL,
@@ -180,11 +174,8 @@ const saveGiftCardSubmission = async (giftCardData) => {
     // Save the gift card submission data to Firestore
     await firestore.collection('giftCard').doc(submissionId).set(submissionData);
 
-    console.log('Gift card submission saved successfully.');
-
     return submissionId;
   } catch (error) {
-    console.error('Error saving gift card submission:', error);
     throw error;
   }
 };
@@ -223,11 +214,8 @@ const saveBitcoinSubmission = async (bitcoinData) => {
     // Save the bitcoin submission data to Firestore
     await firestore.collection('bitcoin').doc(submissionId).set(submissionData);
 
-    console.log('Bitcoin submission saved successfully.');
-
     return submissionId;
   } catch (error) {
-    console.error('Error saving bitcoin submission:', error);
     throw error;
   }
 };

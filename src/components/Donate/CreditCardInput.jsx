@@ -55,7 +55,7 @@ const CreditCardInput = ({ amount, name, email, phone }) => {
         </h2>
       </div>
       <div style={{ margin: "0.5rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
-        <p>Amount: {amount}</p>
+        <p>Amount: $ {amount}.00</p>
         <p>Name: {name}</p>
         <p>Email: {email}</p>
         <p>Phone: {phone}</p>

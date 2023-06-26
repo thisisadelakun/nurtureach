@@ -116,7 +116,7 @@ const AdminAuths = () => {
                                 color: "#006588",
                             }}
                             >
-                                Sign Up
+                                Sign Up Here,
                             </h2>
 
                             <div>
@@ -198,11 +198,11 @@ const AdminAuths = () => {
                         <Form onSubmit={handleLogin}>
                             <h2 style={{
                                 fontFamily: `'Kanit', sans-serif`,
-                                textAlign: "left",
+                                textAlign: "center",
                                 color: "#006588",
                             }}
                             >
-                                Login
+                                Login Here,
                             </h2>
                             <div style={{
                                 marginBottom: "1rem"
@@ -282,9 +282,9 @@ const AdminAuths = () => {
                                     Forgot Password?
                                 </button>
                                 {showSuccessMessage && (
-                                    <div className="success">Password reset link sent successfully!</div>
+                                    <span className="success">Password reset link sent successfully!</span>
                                 )}
-                                {errorMessage && <div className="error">{errorMessage}</div>}
+                                {errorMessage && <span className="error">{errorMessage}</span>}
                             </p>
                             <p style={{ textAlign: "center" }}>
                                 Don't have an account?{' '}

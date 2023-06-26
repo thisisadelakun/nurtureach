@@ -2,6 +2,10 @@ import React from 'react'
 import './Note.css'
 import { articleContent, impactContent, commentContent } from '../../db/db'
 
+
+import { NavLink } from 'react-router-dom';
+import { TbPlayerTrackNextFilled } from 'react-icons/tb'
+
 const Nourishing = () => {
   return (
     <div className='note'>
@@ -105,10 +109,23 @@ const Nourishing = () => {
         </div>
       ))}
 
-      <div className='note-article' style={{ background: "skyblue"}}>
+      <div className='yellow-btn shadow' style={{
+        background: "rgb(255, 166, 0)", display: "flex", float: "right",
+        width: "fit-content", padding: "0.8rem 1.5rem"
+      }}>
+        <NavLink
+          className=""
+          style={{ textDecoration: "none", color: "#fff" }}
+          to='/our-impact/power-of-education'
+        >
+          NEXT <TbPlayerTrackNextFilled />
+        </NavLink>
+      </div>
+
+      <div className='note-article' style={{ background: "skyblue" }}>
         <div className="impactReached">
           {impactContent.map((item) => (
-            <div key={item.id} className="impactReached-col"  style={{  color:"#003e54" }}>
+            <div key={item.id} className="impactReached-col" style={{ color: "#003e54" }}>
               {item.id === "7" && (
                 <div className="iR-col1" >
                   <h1 className='ir-h1'>{item.title}</h1>

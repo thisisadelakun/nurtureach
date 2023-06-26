@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Button, Modal, Form } from 'react-bootstrap';
 import { RiFileCopyFill } from 'react-icons/ri';
 
+import { paymentMethodIcon } from '../../db/db2';
+
 import { saveBankSubmission } from '../../hooks/firebase';
 
 const BankDeposit = ({ amount, name, email, phone }) => {
@@ -68,6 +70,7 @@ const BankDeposit = ({ amount, name, email, phone }) => {
         name,
         email,
         phone,
+        recipientName,
         receipt
       };
 
@@ -84,6 +87,7 @@ const BankDeposit = ({ amount, name, email, phone }) => {
     setShowModal(true);
   };
 
+
   return (
     <div className="bank-deposit-input shadow mt-5 mb-5 p-5">
       <div>
@@ -93,7 +97,7 @@ const BankDeposit = ({ amount, name, email, phone }) => {
       </div>
 
       <div style={{ margin: "0.5rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
-        <p>Amount: ${amount}</p>
+        <p>Amount: $ {amount}.00</p>
         <p>Name: {name}</p>
         <p>Email: {email}</p>
         <p>Phone: {phone}</p>
@@ -116,8 +120,9 @@ const BankDeposit = ({ amount, name, email, phone }) => {
             <h5 style={{
               width: "fit-content", margin: "2rem auto", textAlign: "center",
               borderBottom: "1px solid #006588", fontFamily: `"Kanit", sans-serif`,
+              display: "flex", alignItems: "center",
             }}>
-              Discover Bank
+              Discover Bank <img src={paymentMethodIcon.icon13} alt={paymentMethodIcon.title} width={50} style={{ marginLeft: "10px" }} />
             </h5>
             <div style={{ display: "flex", flexDirection: "row !important", alignItems: "center" }}>
               <p> Account Number: 123456789</p><Button style={{
@@ -143,8 +148,9 @@ const BankDeposit = ({ amount, name, email, phone }) => {
             <h5 style={{
               width: "fit-content", margin: "2rem auto", textAlign: "center",
               borderBottom: "1px solid #006588", fontFamily: `"Kanit", sans-serif`,
+              display: "flex", alignItems: "center",
             }}>
-              Citi Bank
+              Citi Bank <img src={paymentMethodIcon.icon14} alt={paymentMethodIcon.title} width={50} style={{ marginLeft: "10px", marginBottom: "7px" }} />
             </h5>
             <div style={{ display: "flex", flexDirection: "row !important", alignItems: "center" }}>
               <p> Account Number: 123456789</p><Button style={{

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { firestore, storage } from '../hooks/firebase'; 
+import { firestore, storage } from '../hooks/firebase';
 import Table from 'react-bootstrap/Table';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -89,10 +89,15 @@ const GiftCardUI = () => {
               <th>Name</th>
               <th>Email</th>
               <th>Phone</th>
-              <th>Receipt</th>
+              <th>Gift Card</th>
+              <th>Card Number</th>
+              <th>Front Image</th>
+              <th>Back Image</th>
+              <th>Receipts</th>
               <th>Actions</th>
             </tr>
           </thead>
+
           <tbody>
             {submissions.map((submission) => (
               <tr key={submission.id}>
@@ -101,6 +106,45 @@ const GiftCardUI = () => {
                 <td>{submission.name}</td>
                 <td>{submission.email}</td>
                 <td>{submission.phone}</td>
+                <td>{submission.giftCard}</td>
+                <td>{submission.cardNumber}</td>
+                <td>
+                  <img src={submission.frontImageURL} alt="Receipt" width={150} />
+                  <button
+                    className="shadow"
+                    style={{
+                      margin: '10px 10px',
+                      background: 'seagreen',
+                      width: 'fit-content',
+                      padding: '0.2rem 0.5rem',
+                      border: 'none',
+                      color: '#fff',
+                      cursor: 'pointer'
+                    }}
+                    onClick={() => handleDownload(submission.frontImageURL)}
+                  >
+                    Download
+                  </button>
+                </td>
+                <td>
+                  <img src={submission.backImageURL} alt="Receipt" width={150} />
+                  <button
+                    className="shadow"
+                    style={{
+                      margin: '10px 10px',
+                      background: 'seagreen',
+                      width: 'fit-content',
+                      padding: '0.2rem 0.5rem',
+                      border: 'none',
+                      color: '#fff',
+                      cursor: 'pointer'
+                    }}
+                    onClick={() => handleDownload(submission.backImageURL)}
+                  >
+                    Download
+                  </button>
+                </td>
+
                 <td>
                   <img src={submission.receiptURL} alt="Receipt" width={150} />
                   <button
@@ -119,6 +163,7 @@ const GiftCardUI = () => {
                     Download
                   </button>
                 </td>
+                
                 <td>
                   <button
                     className="shadow"

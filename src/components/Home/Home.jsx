@@ -223,7 +223,7 @@ const Home = () => {
                     <NavLink
                       className="nav-link-apply"
                       to='/apply-now'
-                      style={{ color: "rgb(255, 203, 112)", fontStyle: "italic", fontWeight: "700", marginRight: "5px" }}
+                      style={{ color: "#003e54", fontStyle: "italic", fontWeight: "900", marginRight: "5px" }}
                     >
                       Apply now
                     </NavLink> {item.content2}
