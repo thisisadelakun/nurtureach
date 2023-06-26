@@ -7,7 +7,7 @@
 .note1-header-img {
     filter: brightness(50%);
     background-image: url(../../assets/food_four.jpg);
-    background-color: skyblue;
+    background-color: skyblue !important;
     background-size: cover;
     background-position: center;
     filter: brightness(50%);
@@ -18,7 +18,7 @@
 .note2-header-img {
     filter: brightness(50%);
     background-image: url(../../assets/education_one.jpg);
-    background-color: rgb(255, 166, 0);
+    background-color: rgb(255, 166, 0) !important;
     background-size: cover;
     background-position: center;
     filter: brightness(50%);
@@ -29,7 +29,7 @@
 .note3-header-img {
     filter: brightness(50%);
     background-image: url(../../assets/earth_one_greener.jpg);
-    background-color: seagreen;
+    background-color: seagreen !important;
     background-size: cover;
     background-position: center;
     filter: brightness(50%);
@@ -40,7 +40,7 @@
 .note4-header-img {
     filter: brightness(50%);
     background-image: url(../../assets/others_three_bg.jpg);
-    background-color: #003e54;
+    background-color: #003e54 !important;
     background-size: cover;
     background-position: center;
     filter: brightness(50%);

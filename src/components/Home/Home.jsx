@@ -31,6 +31,7 @@ const Home = () => {
             ABOUT US
           </NavLink>
         </div>
+
         <div className="learn_more">
           <Link
             style={{ fontSize: "20px" }}

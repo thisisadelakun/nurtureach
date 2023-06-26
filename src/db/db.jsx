@@ -211,7 +211,8 @@ export const articleContent = [
         img1: others1,
         img2: others2,
         img3: others3,
-        quote: `"Someone's sitting in the shade today because someone planted a tree a long time ago." - Warren Buffett`,
+        quote: `"Making a difference through charity is a privilege and a responsibility. Let's create a better world through acts of 
+                 kindness." - Sonu Sood`,
         paragraph1: `In today's world, numerous charities are working tirelessly to address critical social and environmental 
                      issues. From providing shelter and cleanliness to combating plastic pollution, these organizations play a 
                      vital role in creating positive change. Among them, NurtureReach stands out as a catalyst for transformation 

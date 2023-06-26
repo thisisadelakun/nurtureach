@@ -184,6 +184,7 @@
 .homearticle-col3 img,
 .homearticle-col4 img {
     filter: brightness(30%);
+    background-color: #003e54 ;
 }
 
 .image-overlay {

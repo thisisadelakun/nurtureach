@@ -7,6 +7,7 @@
 .privacy-header-img {
     filter: brightness(50%);
     background-image: url(../../assets/others_one.jpg);
+    background-color: #003e54;
     background-size: cover;
     background-position: center;
     filter: brightness(50%);

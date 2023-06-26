@@ -8,6 +8,7 @@
 .apply-header-img {
     filter: brightness(50%);
     background-image: url(../../assets/earth_five_plant.jpg);
+    background-color: seagreen;
     background-size: cover;
     background-position: center;
     filter: brightness(50%);
