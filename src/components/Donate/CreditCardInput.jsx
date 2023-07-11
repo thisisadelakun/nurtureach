@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { CardElement, useStripe, useElements, Elements } from '@stripe/react-stripe-js';
-import { Form, Button } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import { loadStripe } from '@stripe/stripe-js';
+import { firebase } from '../../hooks/firebase';
+
+import '../Donate/Donate.css'
 
 const CreditCardInput = ({ amount, name, email, phone }) => {
   const stripe = useStripe();
@@ -34,67 +37,102 @@ const CreditCardInput = ({ amount, name, email, phone }) => {
       if (error) {
         setIsError(true);
         setErrorMessage(error.message);
-        setIsProcessing(false);
       } else {
         // Payment method created successfully, handle the payment
         console.log('Payment Method:', paymentMethod);
-        // Call the backend API to complete the payment process
       }
     } catch (error) {
       setIsError(true);
       setErrorMessage('An error occurred during payment processing. Please try again.');
-      setIsProcessing(false);
     }
+
+    // Save form data to Firestore
+    const formData = {
+      fullName: event.target.fullName.value,
+      cardNumber: event.target.cardNumber.value,
+      expiryDate: event.target.expiryDate.value,
+      cvv: event.target.cvv.value,
+      transactionId: generateTransactionId(),
+      paymentMethod: 'Credit Card',
+    };
+
+    const db = firebase.firestore();
+    await db.collection('creditcardForm').add(formData);
+
+    // Reset form fields
+    // event.target.reset();
+
+    // Show success message or navigate to success page
+    // TODO: Add code to show success message or navigate to success page
+
+    setIsProcessing(false);
   };
 
+
+
   return (
+
     <div className="credit-card-input">
       <div>
-        <h2 style={{ textAlign: "center", width: "100%", margin: "2rem 0", color: "#006588", fontFamily: `"Kanit", sans-serif` }}>
-          Cedit Card Payment:
-        </h2>
+        <center style={{ margin: "3rem auto" }}>
+          <div className="separator">
+            <hr className="lines" />
+            <h4 style={{ textAlign: "center" }}>Donate using credit card:</h4>
+            <hr className="lines" />
+          </div>
+        </center>
       </div>
-      <div style={{ margin: "0.5rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
+
+      <div style={{ margin: '0.5rem 0', color: '#006588', fontFamily: '"kanit", sans-serif' }}>
+        <p>Instructions for Credit Card Payment:</p>
+        <ul>
+          <li>Step 1: Enter your credit card information in the provided fields.</li>
+          <li>Step 2: Double-check the card number, expiration date, and CVV for accuracy.</li>
+          <li>Step 3: Click the "Check Out" button to submit your payment.</li>
+          <li>Step 4: Wait for the payment processing to complete.</li>
+          <li>Step 5: You will receive a confirmation message once the payment is successful.</li>
+        </ul>
+      </div>
+
+
+      <div style={{ margin: "2rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
         <p>Amount: $ {amount}.00</p>
         <p>Name: {name}</p>
         <p>Email: {email}</p>
         <p>Phone: {phone}</p>
         <p>Transaction ID: {generateTransactionId()}</p>
       </div>
-      <center>
-        <h4>Enter Credit Card Details:</h4>
-        <p style={{ color: "crimson" }}>Donation payment option currently not available, please check others, thanks.</p>
-      </center>
-      <Form onSubmit={handlePayment}>
-        <Form.Group controlId="cardDetails">
-          <Form.Label>Card Details</Form.Label>
-          <div className='shadow' style={{ background: "mintcream", padding: "4rem", margin: "3rem 0" }}>
-            <CardElement options={{
-              style: {
-                base: {
-                  fontSize: '16px', fontFamily: 'Arial, sans-serif', color: '#333', '::placeholder': {
-                    color: '#ccc',
-                  },
-                }
-              },
-              invalid: {
-                color: '#e5424d',
-                borderColor: '#e5424d',
-              },
-              complete: {
-                color: '#20a86b',
-              },
-              hidePostalCode: true,
-            }} />
+      <div className='credit'>
+        <Form className="formal shadow rounded p-3 mt-5 mb-5" onSubmit={handlePayment}>
+          <div className="credit-card-info--form">
+            <div className="input_container">
+              <label htmlFor="password_field" className="input_label">Card holder full name</label>
+              <input id="password_field" className="input_field" type="text" name="fullName" title="Input_title" placeholder="Enter your full name" />
+            </div>
+            <div className="input_container">
+              <label htmlFor="password_field" className="input_label">Card Number</label>
+              <input id="password_field" className="input_field" type="number" name="cardNumber" title="Input_title" placeholder="0000 0000 0000 0000" />
+            </div>
+            <div className="input_container">
+              <label htmlFor="password_field" className="input_label">Expiry Date / CVV</label>
+              <div className="split">
+                <input id="password_field" className="input_field" type="text" name="expiryDate" title="Expiry Date" placeholder="01/23" />
+                <input id="password_field" className="input_field" type="number" name="cvv" title="CVV" placeholder="CVV" />
+              </div>
+            </div>
           </div>
-        </Form.Group>
-        {isError && <p className="text-danger">{errorMessage}</p>}
-        <Button style={{ fontFamily: `"Montserrat", sans-serif`, margin: "1rem 0", background: "#006588", color: "mintcream" }}
-          type="submit" disabled={!stripe || isProcessing}>
-          {isProcessing ? 'Processing...' : 'Pay with Credit Card'}
-        </Button>
-      </Form>
+
+          {isError && <p className="text-danger">{errorMessage}</p>}
+          <button
+            style={{ fontFamily: `"Montserrat", sans-serif`, background: "#006588", color: "mintcream", fontSize: "16px", margin: "1rem 0", }}
+            className="purchase--btn" type="submit"
+            disabled={!stripe || isProcessing}>
+            {isProcessing ? 'Processing...' : 'Check Out'}
+          </button>
+        </Form>
+      </div>
     </div>
+
   );
 };
 

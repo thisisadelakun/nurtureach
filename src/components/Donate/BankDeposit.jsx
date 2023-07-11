@@ -90,13 +90,32 @@ const BankDeposit = ({ amount, name, email, phone }) => {
 
   return (
     <div className="bank-deposit-input shadow mt-5 mb-5 p-5">
+
       <div>
-        <h2 style={{ textAlign: "center", width: "100%", margin: "2rem 0", color: "#006588", fontFamily: `"Kanit", sans-serif` }}>
-          Bank Deposit / Wire Transfer:
-        </h2>
+        <center style={{ margin: "3rem auto" }}>
+          <div className="separator">
+            <hr className="lines" />
+            <h4 style={{ textAlign: "center", width: "100%", color: "#006588", fontFamily: `"Kanit", sans-serif` }}>
+              Donate with Bank Deposit / Wire Transfer:
+            </h4>
+            <hr className="lines" />
+          </div>
+        </center>
       </div>
 
-      <div style={{ margin: "0.5rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
+      <div style={{ margin: "0.5rem 0", color: "#006588", fontFamily: `"kanit", sans-serif` }}>
+        <p>Instructions for Bank Deposit / Wire Transfer:</p>
+        <ul>
+          <li>Step 1: Choose one of the listed banks.</li>
+          <li>Step 2: Copy the account number and routing number.</li>
+          <li>Step 3: Initiate a bank deposit or wire transfer using the provided details.</li>
+          <li>Step 4: After performing the transaction, click "I have donated" button, proceed to upload your bank
+            deposit/ wiretransfer receipt.
+          </li>
+        </ul>
+      </div>
+
+      <div style={{ margin: "2rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
         <p>Amount: $ {amount}.00</p>
         <p>Name: {name}</p>
         <p>Email: {email}</p>
@@ -104,17 +123,8 @@ const BankDeposit = ({ amount, name, email, phone }) => {
         <p>Transaction ID: {generateTransactionId()}</p>
       </div>
 
-      <div style={{ margin: "1rem 0", color: "#006588", fontFamily: `"kanit", sans-serif` }}>
-        <p>Instructions for Bank Deposit / Wire Transfer:</p>
-        <ul>
-          <li>Step 1: Choose one of the listed banks.</li>
-          <li>Step 2: Copy the account number and routing number.</li>
-          <li>Step 3: Initiate a bank deposit or wire transfer using the provided details.</li>
-        </ul>
-      </div>
-
       <div className="bank-details">
-        <h3 style={{ margin: "2rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>Bank Details:</h3>
+        <h6 style={{ margin: "2rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>Bank Details:</h6>
         <div className="bank-info">
           <div className="bank-info-item" style={{ margin: "1rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
             <h5 style={{

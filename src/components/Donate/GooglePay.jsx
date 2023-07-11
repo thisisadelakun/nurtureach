@@ -16,9 +16,16 @@ const GooglePay = ({ amount, name, email, phone }) => {
     return (
         <div>
             <div>
-                <h2 style={{ textAlign: "center", width: "100%", margin: "2rem 0", color: "#006588", fontFamily: `"Kanit", sans-serif` }}>
-                    Google Pay Donation Payment:
-                </h2>
+                <center style={{ margin: "3rem auto" }}>
+                    <div className="separator">
+                        <hr className="lines" />
+                        <h4 style={{ textAlign: "center", width: "100%", color: "#006588", fontFamily: `"Kanit", sans-serif`, }}>
+                            <img src={paymentMethodIcon.icon10} alt={paymentMethodIcon.title} width={60}
+                            /> Donation:
+                        </h4>
+                        <hr className="lines" />
+                    </div>
+                </center>
             </div>
             <div style={{ margin: "0.5rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
                 <p>Amount: $ {amount}.00</p>
@@ -27,12 +34,11 @@ const GooglePay = ({ amount, name, email, phone }) => {
                 <p>Phone: {phone}</p>
                 <p>Transaction ID: {generateTransactionId()}</p>
             </div>
-            <center>
-                <h4 style={{ textAlign: "center", width: "100%", margin: "2rem 0", color: "#006588", fontFamily: `"Kanit", sans-serif` }}>
-                    <img src={paymentMethodIcon.icon10} alt={paymentMethodIcon.title} width={50} /> Details
-                </h4>
-                <p style={{ color: "crimson" }}>Donation payment option currently not available, please check others, thanks.</p>
-            </center>
+            <div style={{ margin: "5rem auto", width: "95%", textAlign: "center" }}>
+                <p style={{ color: "crimson" }}>
+                    Donation option currently not available, please go back to choose another payment option, thanks.
+                </p>
+            </div>
         </div>
     )
 }

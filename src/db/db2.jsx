@@ -17,6 +17,8 @@ import icon11 from '../assets/Icon11.svg'
 import icon12 from '../assets/Icon12.svg'
 import icon13 from '../assets/Icon13.svg'
 import icon14 from '../assets/Icon14.svg'
+import icon15 from '../assets/applepay.svg'
+import icon16 from '../assets/googlepay.svg'
 
 
 export const aboutContent = [
@@ -363,4 +365,6 @@ export const paymentMethodIcon = {
     icon12: icon12,
     icon13: icon13,
     icon14: icon14,
+    icon15: icon15,
+    icon16: icon16,
 }

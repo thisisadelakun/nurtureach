@@ -73,6 +73,10 @@ const Bitcoin = ({ amount, name, email, phone }) => {
     setShowModal(true);
   };
 
+  const handleCopy = (value) => {
+    navigator.clipboard.writeText(value);
+  };
+
   const handleSubmit = () => {
     setShowForm(true);
   };
@@ -84,12 +88,29 @@ const Bitcoin = ({ amount, name, email, phone }) => {
   return (
     <div className="bitcoin-payment-input shadow mt-5 mb-5 p-5">
       <div>
-        <h2 style={{ textAlign: "center", width: "100%", margin: "2rem 0", color: "#006588", fontFamily: `"Kanit", sans-serif` }}>
-          Bitcoin or Ethereum Donation Payment Details:
-        </h2>
+        <center style={{ margin: "3rem auto" }}>
+          <div className="separator">
+            <hr className="lines" />
+            <h4 style={{ textAlign: "center", width: "100%", color: "#006588", fontFamily: `"Kanit", sans-serif` }}>
+              Donate with Bitcoin or Ethereum:
+            </h4>
+            <hr className="lines" />
+          </div>
+        </center>
       </div>
 
-      <div style={{ margin: "0.5rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
+      <div style={{ margin: "0.5rem 0", color: "#006588", fontFamily: `"kanit", sans-serif` }}>
+        <p>Instructions for Cryptocurrency Donation:</p>
+        <ul>
+          <li>Step 1: Copy the wallet address provided below.</li> to us
+          <li>Step 2: Or scan the QR Code.</li>
+          <li>Step 3: Initiate a payment using the provided address.</li>
+          <li>Step 4: After performing the transaction, click "I have donated" button,
+            proceed to upload bitcoin/ethereum payment receipt.</li>
+        </ul>
+      </div>
+
+      <div style={{ margin: "2rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
         <p>Amount: $ {amount}.00</p>
         <p>Name: {name}</p>
         <p>Email: {email}</p>
@@ -97,28 +118,18 @@ const Bitcoin = ({ amount, name, email, phone }) => {
         <p>Transaction ID: {generateTransactionId()}</p>
       </div>
 
-      <div style={{ margin: "1rem 0", color: "#006588", fontFamily: `"kanit", sans-serif` }}>
-        <p>Instructions for Bitcoin Donation Payment:</p>
-        <ul>
-          <li>Step 1: Copy the wallet address provided below.</li> to us
-          <li>Step 2: Or scan the QR Code.</li>
-          <li>Step 3: Initiate a payment using the provided address.</li>
-          <li>Step 4: Confirm the payment by submitting the payment receipt.</li>
-        </ul>
-      </div>
-
       <div className="bitcoin-details">
-        <h3 style={{ margin: "2rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
+        <h5 style={{ margin: "2rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
           <img src={paymentMethodIcon.icon11} alt={paymentMethodIcon.title} width={50} />Deposit Btc:
-        </h3>
+        </h5>
         <div className="bitcoin-info">
           <div className="bitcoin-info-item" style={{ margin: "1rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
-            <h5 style={{
+            <h6 style={{
               width: "fit-content", margin: "2rem auto", textAlign: "center",
               borderBottom: "1px solid #006588", fontFamily: `"Kanit", sans-serif`,
             }}>
               Bitcoin Wallet
-            </h5>
+            </h6>
 
             <center>
               <div style={{}}>
@@ -155,16 +166,16 @@ const Bitcoin = ({ amount, name, email, phone }) => {
         </div>
 
 
-        <h3 style={{ margin: "2rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
+        <h5 style={{ margin: "2rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
           <img src={paymentMethodIcon.icon12} alt={paymentMethodIcon.title} width={70} />Deposit ETH:
-        </h3>
+        </h5>
         <div className="bitcoin-info-item" style={{ margin: "1rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
-          <h5 style={{
+          <h6 style={{
             width: "fit-content", margin: "2rem auto", textAlign: "center",
             borderBottom: "1px solid #006588", fontFamily: `"Kanit", sans-serif`,
           }}>
             Ethereum Wallet
-          </h5>
+          </h6>
 
           <center>
             <div style={{}}>

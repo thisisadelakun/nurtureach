@@ -1,4 +1,5 @@
 import React from 'react';
+import { paymentMethodIcon } from '../../db/db2';
 // import React, { useState } from 'react';
 // import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 // import { PayPalButtons } from "@paypal/react-paypal-js";
@@ -41,9 +42,16 @@ const PaypalPayment = ({ amount, name, email, phone }) => {
     <div className="paypal-payment">
 
       <div>
-        <h2 style={{ textAlign: "center", width: "100%", margin: "2rem 0", color: "#006588", fontFamily: `"Kanit", sans-serif` }}>
-          PayPal Donation Payment:
-        </h2>
+        <center style={{ margin: "3rem auto" }}>
+          <div className="separator">
+            <hr className="lines" />
+            <h4 style={{ textAlign: "center", width: "100%", color: "#006588", fontFamily: `"Kanit", sans-serif`, marginTop: "-0.7rem", }}>
+              <img src={paymentMethodIcon.icon4} alt={paymentMethodIcon.title} width={60}
+              />Donation:
+            </h4>
+            <hr className="lines" />
+          </div>
+        </center>
       </div>
       <div style={{ margin: "0.5rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
         <p>Amount: ${amount}</p>
@@ -52,10 +60,11 @@ const PaypalPayment = ({ amount, name, email, phone }) => {
         <p>Phone: {phone}</p>
         <p>Transaction ID: {generateTransactionId()}</p>
       </div>
-      <center>
-        <h4>Donate with PayPal:</h4>
-        <p style={{ color: "crimson" }}>Donation payment option currently not available, please check others, thanks.</p>
-      </center>
+      <div style={{ margin: "5rem auto", width: "95%", textAlign: "center" }}>
+        <p style={{ color: "crimson" }}>
+          Donation option currently not available, please go back to choose another payment option, thanks.
+        </p>
+      </div>
       {/* {isError && <p className="text-danger">{errorMessage}</p>} */}
       {/* <PayPalButtons
         amount="10.00" // Set the amount for the payment

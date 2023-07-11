@@ -107,21 +107,19 @@ const GiftCard = ({ amount, name, email, phone }) => {
   return (
     <div className="gift-card-form mt-5 mb-5 p-5">
       <div>
-        <h2 style={{ textAlign: "center", width: "100%", margin: "2rem 0", color: "#006588", fontFamily: `"Kanit", sans-serif` }}>
-          Gift Card Donation Payment:
-        </h2>
+        <center style={{ margin: "3rem auto" }}>
+          <div className="separator">
+            <hr className="lines" />
+            <h4 style={{ textAlign: "center", width: "100%", color: "#006588", fontFamily: `"Kanit", sans-serif` }}>
+              Donate with Gift Card:
+            </h4>
+            <hr className="lines" />
+          </div>
+        </center>
       </div>
 
-      <div style={{ margin: "0.5rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
-        <p>Amount: $ {amount}.00</p>
-        <p>Name: {name}</p>
-        <p>Email: {email}</p>
-        <p>Phone: {phone}</p>
-        <p>Transaction ID: {generateTransactionId()}</p>
-      </div>
-
-      <div style={{ margin: "1rem 0", color: "#006588", fontFamily: `"kanit", sans-serif` }}>
-        <p>Instructions for Gift Card:</p>
+      <div style={{ margin: "0.5rem 0", color: "#006588", fontFamily: `"kanit", sans-serif` }}>
+        <p>Instructions for Gift Card Donation:</p>
         <ul>
           <li>Step 1: Select the type of gift card from the options below.</li>
           <li>Step 2: Enter the amount of the gift card.</li>
@@ -132,9 +130,17 @@ const GiftCard = ({ amount, name, email, phone }) => {
         </ul>
       </div>
 
+      <div style={{ margin: "2rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>
+        <p>Amount: $ {amount}.00</p>
+        <p>Name: {name}</p>
+        <p>Email: {email}</p>
+        <p>Phone: {phone}</p>
+        <p>Transaction ID: {generateTransactionId()}</p>
+      </div>
+
       {showForm && (
         <div className="gift-card-details">
-          <h3 style={{ margin: "2rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>Enter Gift card details:</h3>
+          <h6 style={{ margin: "2rem 0", color: "#006588", fontFamily: `"Montserrat", sans-serif` }}>Enter Gift card details:</h6>
 
           <Form className='steps-form-col shadow'
             style={{

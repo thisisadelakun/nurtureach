@@ -375,7 +375,7 @@ const Donate = () => {
                   name="paymentMethod"
                   onChange={handlePaymentMethodChange} required >
 
-                  <option value="" >Select payment method</option>
+                  <option value="" >Select Donation Payment method</option>
                   <option value="creditCard">Credit Card</option>
                   <option value="bankTransfer">Bank Deposit or Transfer</option>
                   <option value="bitcoin">Bitcoin or Ethereum</option>
@@ -386,7 +386,7 @@ const Donate = () => {
 
                 </Form.Select >
                 <Form.Control.Feedback type="invalid">
-                  Please choose a Payment Method.
+                  Please choose a Donation Payment method.
                 </Form.Control.Feedback>
               </Form.Group>
 
