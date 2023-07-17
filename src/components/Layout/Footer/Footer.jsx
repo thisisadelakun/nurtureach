@@ -61,7 +61,7 @@ const Footer = () => {
                 </div>
             </div>
             <div>
-                <p className="copyRight">&copy; {new Date().getFullYear()} {companyInfo.name} {companyInfo.subName}.</p>
+                <p className="copyRight">&copy;{new Date().getFullYear()} {companyInfo.name} {companyInfo.subName}.</p>
             </div>
         </footer>
     );
