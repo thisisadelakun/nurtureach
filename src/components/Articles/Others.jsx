@@ -91,11 +91,11 @@ const Others = () => {
             </div>
             {item.id === "4" && (
               <div className="note-img" style={{ overflowX: "hidden" }}>
-                <div className='note-image-row' style={{ display: "flex", flexDirection: "row", overflowX: "hidden" }}>
-                  <img src={item.img3} alt={item.title} className='image-fluid' width={250} />
-                  <img src={item.img1} alt={item.title} className='image-fluid' width={250} />
+                <div className='note-image-row' style={{ display: "flex", flexDirection: "row", overflowX: "scroll" }}>
+                  <img src={item.img3} alt={item.title} className='image-fluid img_row' />
+                  <img src={item.img1} alt={item.title} className='image-fluid img_row' />
                 </div>
-                <img src={item.img2} alt={item.title} className='image-fluid' width={500} />
+                <img src={item.img2} alt={item.title} className='image-fluid img_col' />
               </div>
             )}
           </div>
@@ -116,11 +116,11 @@ const Others = () => {
 
       <div className='yellow-btn shadow' style={{
         background: "seagreen", display: "flex", float: "left",
-        width: "fit-content", padding: "0.8rem 1.5rem"
+        width: "fit-content", padding: "0.8rem 1rem"
       }}>
         <NavLink
           className=""
-          style={{ textDecoration: "none", color: "#fff" }}
+          style={{ textDecoration: "none", color: "#fff", display:"flex", flexDirection:"row", alignItems:"center", gap:"4px", }}
           to='/our-impact/afforestation'
         >
           <TbPlayerTrackPrevFilled /> PREV

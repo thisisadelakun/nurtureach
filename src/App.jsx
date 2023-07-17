@@ -24,7 +24,6 @@ const ApplyForm = lazy(() => import('./components/Form/ApplyForm'));
 
 
 function App() {
-  const imageVersion = '123';
   const queryClient = new QueryClient();
 
   const [isLoading, setIsLoading] = useState(true);
@@ -52,7 +51,7 @@ function App() {
   }, []);
 
   const handleRoutes = () => {
-    // Place any state updates or heavy computations inside startTransition
+    //State updates or heavy computations inside startTransition
     startTransition(() => {
       // State updates and heavy computations go here
 
@@ -123,7 +122,9 @@ function App() {
             </React.Suspense>
           )}
         />
+
         <Route path="/xyzadmin123" element={<AdminAuths />} />
+        
         <Route
           path="/application-form"
           element={(

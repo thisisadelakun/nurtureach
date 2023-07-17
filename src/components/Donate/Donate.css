@@ -34,8 +34,11 @@
     margin: auto;
     width: 90%;
     height: 100%;
-    background: #FFFFFF;
-    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01),
+        0px 105px 63px rgba(0, 0, 0, 0.05),
+        0px 47px 47px rgba(0, 0, 0, 0.09),
+        0px 12px 26px rgba(0, 0, 0, 0.1),
+        0px 0px 0px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
@@ -44,31 +47,6 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-}
-
-.payment-options {
-    width: calc(100% - 40px);
-    display: grid;
-    grid-template-columns: 33% 34% 33%;
-    gap: 20px;
-    padding: 10px;
-}
-
-.payment-options button {
-    height: 55px;
-    background: #F2F2F2;
-    border-radius: 11px;
-    padding: 0;
-    border: 0;
-    outline: none;
-}
-
-.payment-options button svg {
-    height: 18px;
-}
-
-.payment-options button:last-child svg {
-    height: 22px;
 }
 
 .separator {
@@ -163,7 +141,6 @@
     box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 4px #0000003a;
 }
 
-/* Reset input number styles */
 .input_field::-webkit-outer-spin-button,
 .input_field::-webkit-inner-spin-button {
     -webkit-appearance: none;
