@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Loading from './hooks/loading/Loading';
 import Layout from './components/Layout/Layout';
 import AdminAuths from './AdminAuth';
+import Dislclaimer from './components/disclaimer/Dislclaimer';
 
 const Home = lazy(() => import('./components/Home/Home'));
 const Privacy = lazy(() => import('./components/Privacy/Privacy'));
@@ -63,7 +64,6 @@ function App() {
       // console.log(result);
     });
 
-    // Return the routes JSX
     return (
       <Routes>
         <Route
@@ -124,7 +124,7 @@ function App() {
         />
 
         <Route path="/xyzadmin123" element={<AdminAuths />} />
-        
+
         <Route
           path="/application-form"
           element={(
@@ -170,6 +170,15 @@ function App() {
           element={(
             <React.Suspense fallback={<Loading />}>
               <Education />
+            </React.Suspense>
+          )}
+        />
+
+        <Route
+          path="/disclaimer"
+          element={(
+            <React.Suspense fallback={<Loading />}>
+              <Dislclaimer />
             </React.Suspense>
           )}
         />

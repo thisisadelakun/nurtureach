@@ -12,10 +12,10 @@ const Footer = () => {
         // Reset the email input
         setEmail('');
     };
-    
+
     return (
         <footer className="footer">
-            
+
             <div className="footer-col">
                 <div className='footer-left'>
                     <div className="socialMedia">
@@ -62,6 +62,15 @@ const Footer = () => {
             </div>
             <div>
                 <p className="copyRight">&copy;{new Date().getFullYear()} {companyInfo.name} {companyInfo.subName}.</p>
+                <div className="disclaimer footer-links container">
+                    <Link to="/disclaimer"
+                        style={{
+                            fontSize: "15px", color: "yellow", textAlign: "center",
+                            textDecoration: "underline", fontWeight: "900",
+                        }}>
+                        READ DiSCLAIMER
+                    </Link>
+                </div>
             </div>
         </footer>
     );

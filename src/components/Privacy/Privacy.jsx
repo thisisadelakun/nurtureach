@@ -1,6 +1,7 @@
 import React from 'react'
 import './Privacy.css'
 import { privacyContent } from '../../db/db2'
+import Dislclaimer from '../disclaimer/Dislclaimer'
 
 const Privacy = () => {
     return (
@@ -95,6 +96,10 @@ const Privacy = () => {
                 </div>
 
             ))}
+
+            <div className="disclaimer">
+                <Dislclaimer/>
+            </div>
         </div>
     )
 }
