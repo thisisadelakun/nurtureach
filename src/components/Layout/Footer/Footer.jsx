@@ -68,7 +68,7 @@ const Footer = () => {
                             fontSize: "15px", color: "yellow", textAlign: "center",
                             textDecoration: "underline", fontWeight: "900",
                         }}>
-                        READ DiSCLAIMER
+                        READ DISCLAIMER
                     </Link>
                 </div>
             </div>
