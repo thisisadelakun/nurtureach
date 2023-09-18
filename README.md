@@ -1,14 +1,13 @@
-Personal Portfolio:
-
 ---
 
-# Personal Portfolio Website
+# Charity Organization Website
 
 # PLEASE READ THE DISCLAIMER BELOW 👇👇👇
 
 [Disclaimer](./src/components/Privacy/disclaimer.txt)
 
 ![Project Preview](./nurtureassets/nurture.webp)
+GoLive: [NurtureReach](https://nurturereach.netlify.app/)
 
 
 ## Table of Contents
@@ -44,7 +43,7 @@ Welcome to my NurtureReach, a charity organization website! This project serves 
 
 The project is structured as follows:
 
-- `public/`: Public assets and the HTML entry point.
+- `public/`: Public assets.
 - `src/`: Source code of the application.
   - `components/`: React components & Stylesheets for different sections of the website.
   - `db/`: JSON files containing datas.
@@ -52,12 +51,13 @@ The project is structured as follows:
   - `index.css/`: Stylesheet for general styling.
   - `App.jsx`: The root component that sets up the application layout and routes.
   - `main.jsx`: The entry point of the React application.
+- `index.html`: HTML entry point.
 
 ## Contact
 
 - Abayomi Adelakun
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/abayomi-adelakun-897227178/)
 - Twitter: [Twitter](https://twitter.com/thisisadelakun)
-- Instagram: [Twitter](https://instagram.com/thisisadelakun)
+- Instagram: [Instagram](https://instagram.com/thisisadelakun)
 
 ---
